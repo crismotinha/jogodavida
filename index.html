@@ -5,77 +5,82 @@
 	<title>Jogo da vida</title>
 	<script type="text/javascript" src="js/jogodavida.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
+</head>
 <body onload="pegarElementos()">
-<div class="container">
-<h1>Jogo da vida</h1>
-<h4>O jogo da vida é um autômato celular desenvolvido pelo matemático britânico John Horton Conway em 1970. 
-O jogo foi criado de modo a reproduzir, através de regras simples, as alterações e mudanças em grupos de seres vivos, 
-tendo aplicações em diversas áreas da ciência. <sup><a href="https://pt.wikipedia.org/wiki/Jogo_da_vida" target="_blank">[1]</a></sup><br>
-As regras básicas são:<br>
-- Qualquer célula viva com menos que duas células vivas vizinhas morre, por baixa população;<br>
-- Qualquer célula viva com mais que três células vivas vizinhas morre, por alta população;<br>
-- Qualquer célula viva com duas ou três células vivas vizinhas permanece viva para a próxima geração;<br>
-- Qualquer célula morta com exatamente três células vivas vizinhas se transforma em uma célula viva;<br><br>
-No exemplo abaixo, temos apenas uma "etapa". Você insere as células vivas/mortas
-e, ao clicar em selecionar célula, vê o estado atual da mesma na geração seguinte.</h4>
-</div>
-<form id="matriz" class="container">
-<h3>Insira sua matriz:</h3>
-<p> Insira apenas 1 (viva) e 0 (morta). Se deixar em branco, será lido como 0. </p>
-	<table>
-		<tr>
-			<td><input type="number" id="00" min="0" max="1"></td>
-			<td><input type="number" id="01" min="0" max="1"></td>
-			<td><input type="number" id="02" min="0" max="1"></td>
-		</tr>
-		<tr>
-			<td><input type="number" id="10" min="0" max="1"></td>
-			<td><input type="number" id="11" min="0" max="1"></td>
-			<td><input type="number" id="12" min="0" max="1"></td>
-		</tr>
-		<tr>
-			<td><input type="number" id="20" min="0" max="1"></td>
-			<td><input type="number" id="21" min="0" max="1"></td>
-			<td><input type="number" id="22" min="0" max="1"></td>
-		</tr>
-	</table>
-	<input type="button" value="Salvar Matriz" onclick="salvarMatriz(matrizHTML)">
-</form>
 
-<form id="select" class="container">
-<h3>Selecione qual célula você deseja ver o estado:</h3>
-	<table>
-		<tr>
-			<td><input type="radio" id="s00" value="1" name="selected"></td>
-			<td><input type="radio" id="s01" value="1" name="selected"></td>
-			<td><input type="radio" id="s02" value="1" name="selected"></td>
-		</tr>
-		<tr>
-			<td><input type="radio" id="s10" value="1" name="selected"></td>
-			<td><input type="radio" id="s11" value="1" name="selected"></td>
-			<td><input type="radio" id="s12" value="1" name="selected"></td>
-		</tr>
-		<tr>
-			<td><input type="radio" id="s20" value="1" name="selected"></td>
-			<td><input type="radio" id="s21" value="1" name="selected"></td>
-			<td><input type="radio" id="s22" value="1" name="selected"></td>
-		</tr>	
-	</table>
-	<input type="button" value="Selecionar Celula" onclick="selecionarCelula(formSelectHTML)">
-</form>
+	<div class="container">
+		<h1>Jogo da vida</h1>
+		<h4>O jogo da vida é um autômato celular desenvolvido pelo matemático britânico John Horton Conway em 1970. 
+		O jogo foi criado de modo a reproduzir, através de regras simples, as alterações e mudanças em grupos de seres vivos, 
+		tendo aplicações em diversas áreas da ciência. <sup><a href="https://pt.wikipedia.org/wiki/Jogo_da_vida" target="_blank">[1]</a></sup><br>
+		As regras básicas são:<br>
+		- Qualquer célula viva com menos que duas células vivas vizinhas morre, por baixa população;<br>
+		- Qualquer célula viva com mais que três células vivas vizinhas morre, por alta população;<br>
+		- Qualquer célula viva com duas ou três células vivas vizinhas permanece viva para a próxima geração;<br>
+		- Qualquer célula morta com exatamente três células vivas vizinhas se transforma em uma célula viva;<br><br>
+		No exemplo abaixo, temos apenas uma "etapa". Você insere as células vivas/mortas
+		e, ao clicar em selecionar célula, vê o estado atual da mesma na geração seguinte.</h4>
+	</div>
 
-<div class="container">
-<div><h3> Resultado: </h3>
-<p id="resultado"></p>	
-</div>
-</div>
-<footer>
-<hr>
-<div class="container">
-	<p>Algoritmo desenvolvido em JavaScript por <a href="https://crismotinha.github.io/my-portfolio/" target="_blank"> Cris Motinha</a>. <br> <a href="test/testrunner.html" target="_blank">Link</a> para testes unitários desenvolvidos com
-	Mocha, Chai e Sinon. <br> Imagem de fundo por <a href="https://www.wired.com/2010/07/conways-game-of-life-in-html5/" target="_blank"> Wired</a></p>
-</div>
-</footer>
+	<form id="matriz" class="container">
+		<h3>Insira sua matriz:</h3>
+		<p> Insira apenas 1 (viva) e 0 (morta). Se deixar em branco, será lido como 0. </p>
+			<table>
+				<tr>
+					<td><input type="number" id="00" min="0" max="1"></td>
+					<td><input type="number" id="01" min="0" max="1"></td>
+					<td><input type="number" id="02" min="0" max="1"></td>
+				</tr>
+				<tr>
+					<td><input type="number" id="10" min="0" max="1"></td>
+					<td><input type="number" id="11" min="0" max="1"></td>
+					<td><input type="number" id="12" min="0" max="1"></td>
+				</tr>
+				<tr>
+					<td><input type="number" id="20" min="0" max="1"></td>
+					<td><input type="number" id="21" min="0" max="1"></td>
+					<td><input type="number" id="22" min="0" max="1"></td>
+				</tr>
+			</table>
+		<input type="button" value="Salvar Matriz" onclick="salvarMatriz(matrizHTML)">
+	</form>
+
+	<form id="select" class="container">
+	<h3>Selecione qual célula você deseja ver o estado:</h3>
+		<table>
+			<tr>
+				<td><input type="radio" id="s00" value="1" name="selected"></td>
+				<td><input type="radio" id="s01" value="1" name="selected"></td>
+				<td><input type="radio" id="s02" value="1" name="selected"></td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="s10" value="1" name="selected"></td>
+				<td><input type="radio" id="s11" value="1" name="selected"></td>
+				<td><input type="radio" id="s12" value="1" name="selected"></td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="s20" value="1" name="selected"></td>
+				<td><input type="radio" id="s21" value="1" name="selected"></td>
+				<td><input type="radio" id="s22" value="1" name="selected"></td>
+			</tr>	
+		</table>
+		<input type="button" value="Selecionar Celula" onclick="selecionarCelula(formSelectHTML)">
+	</form>
+
+	<div class="container">
+		<div>
+			<h3> Resultado: </h3>
+			<p id="resultado"></p>	
+		</div>
+	</div>
+
+	<footer>
+		<hr>
+		<div class="container">
+			<p>Algoritmo desenvolvido em JavaScript por <a href="https://crismotinha.github.io/my-portfolio/" target="_blank"> Cris Motinha</a> (<a href="https://github.com/crismotinha/jogodavida">repositório no Github</a>). <br> <a href="test/testrunner.html" target="_blank">Link</a> para testes unitários desenvolvidos com
+			Mocha, Chai e Sinon. <br> Imagem de fundo por <a href="https://www.wired.com/2010/07/conways-game-of-life-in-html5/" target="_blank"> Wired</a></p>
+		</div>
+	</footer>
+
 </body>
 </html>
