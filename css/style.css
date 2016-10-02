@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin-left: 1%;
+	margin-right: 1%;
+	background-image: url(http://www.wired.com/wp-content/uploads/2010/07/LifeHTML5.png);
+	background-repeat: repeat;
+}
+h1 {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+form {
+	float: left;
+	width: 45%;
+	margin-top: 3%;
+	margin-bottom: 2%;
+}
+
+div {
+	clear: both;
+}
+
+div > p {
+	margin-top: 1%;
+}
+
+.container {
+	background-color: rgba(255,255,255,0.9);
+	border-radius: 5px;
+}

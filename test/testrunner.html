@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mocha Tests</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/sinon/sinon-1.17.6.js"></script>
+    <script>mocha.setup('bdd')</script>
+
+    <!-- load code you want to test here -->
+<script src="../js/jogodavida.js"></script>
+
+<!-- load your test files here -->
+<script src="jogodavidaSpec.js"></script>
+
+
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
